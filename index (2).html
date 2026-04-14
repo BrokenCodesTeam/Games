@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meus Jogos</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a0f2e, #0a0615);
+    color: white;
+    text-align: center;
+}
+
+/* Título */
+header {
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.7;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+/* Cards */
+.card {
+    width: 260px;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(180, 100, 255, 0.4), transparent);
+    top: -50%;
+    left: -50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* Hover */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Imagem fake */
+.icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* Botão */
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(90deg, #a855f7, #6366f1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Meus Jogos</h1>
+    <p>Experimente meus projetos e jogue direto no navegador</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <div class="icon">🎮</div>
+        <h2>Jogo 1</h2>
+        <p>Um jogo multiplayer estilo .io</p>
+        <button class="btn">Jogar</button>
+    </div>
+
+    <div class="card">
+        <div class="icon">⚔️</div>
+        <h2>Jogo 2</h2>
+        <p>RPG com sistema de classes</p>
+        <button class="btn">Jogar</button>
+    </div>
+
+    <div class="card">
+        <div class="icon">🚗</div>
+        <h2>Jogo 3</h2>
+        <p>Corrida caótica online</p>
+        <button class="btn">Jogar</button>
+    </div>
+
+</div>
+
+</body>
+</html>
